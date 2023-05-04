@@ -1,0 +1,70 @@
+@import '../../global.scss';
+
+.menubar{
+    width: 100%;
+    height: 70px;
+    background-color: $textBgColor;
+    color: $textColor;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    transition: all 1s ease;
+
+    .left{
+
+
+        .logo{
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+        }
+    }
+    .right{
+
+        .bars{
+            width: 32px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            
+            @include desktop{
+                display: none;
+            }
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left;
+                transition: all 1s ease;
+            }
+        }
+    }
+    &.active{
+        background-color: $mainColor;
+        /* color: $textBgColor; */
+
+        .bars{
+
+            
+            
+            span{
+                &:first-child{
+                    background-color: $textColor;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:last-child{
+                    background-color: $textColor;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
