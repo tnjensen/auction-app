@@ -4,7 +4,7 @@ export default function Menubar({menuOpen, setMenuOpen}) {
   return (
     <div className={'menubar ' + (menuOpen && 'active')}>
         <div className="left">
-            <a href='#home' className='logo'>Auction App</a>
+            <a href='#home' className='logo'><span>BidCove</span></a>
         </div>
         Welcome
         <div className="right">

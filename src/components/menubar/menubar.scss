@@ -14,13 +14,22 @@
     transition: all 1s ease;
 
     .left{
-
-
+        
         .logo{
             text-decoration: none;
             cursor: pointer;
-            color: inherit;
+            
+            span{
+                color: $mainColor;
+
+                
+                @include tablet{
+                    font-size: 26px;
+                }
+            }
+           
         }
+        
     }
     .right{
 
@@ -33,7 +42,7 @@
             cursor: pointer;
             
             @include desktop{
-                display: none;
+                /* display: none; */
             }
             span{
                 width: 100%;
@@ -46,22 +55,27 @@
     }
     &.active{
         background-color: $mainColor;
-        /* color: $textBgColor; */
+        color: $textBgColor;
+
+        .logo{
+
+            span{
+                color: $textBgColor;
+            }
+        }
 
         .bars{
 
-            
-            
             span{
                 &:first-child{
-                    background-color: $textColor;
+                    background-color: $textBgColor;
                     transform: rotate(45deg);
                 }
                 &:nth-child(2){
                     display: none;
                 }
                 &:last-child{
-                    background-color: $textColor;
+                    background-color: $textBgColor;
                     transform: rotate(-45deg);
                 }
             }
