@@ -1,6 +1,6 @@
 @import '../../global.scss';
 
-.works{
+.showcase{
     background-color: crimson;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
         top: 10%;
                
         @include tablet{
-            top: 30%;
+            top: 20%;
             height: 350px;
             display: flex;
             flex-direction: row;
@@ -127,8 +127,7 @@
                         span{
                             font-size: 12px;
                             font-weight: 600;
-                            text-decoration: underline;
-                            cursor: pointer;
+                            
                         }
                     }
                 }
@@ -138,6 +137,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    overflow: hidden;
 
                     img{
                         border-radius: 10px;

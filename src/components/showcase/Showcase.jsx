@@ -22,7 +22,7 @@ export default function Showcase() {
     : setCurrentSlide(currentSlide < listings.length - 1 ? currentSlide + 1 : 0);
   }
   return (
-    <div className='works' id='works'>
+    <div className='showcase'>
       <div className='slider' style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
         {listings.map((item) => (
         <div className='container'>
@@ -33,14 +33,16 @@ export default function Showcase() {
                   <img src={item.icon} />
                 </div> */}
                 <h2>{item.title}</h2>
+                <p>{item.description}</p>
                 <p>
-                  {item.desc}
+                  {item.tags}
                 </p>
-                <span>Projects</span>
+                <span>Bids: {item._count.bids}</span>
+                <p></p>
               </div>
             </div>
             <div className="right">
-              <img src={item.media[0]}/>
+              <img src={item.media[0]} alt='no image'/>
             </div>
           </div>
         </div>))}
