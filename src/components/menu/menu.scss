@@ -34,8 +34,8 @@
         padding: 0;
         list-style: none;
         font-size: 20px;
-        font-weight: 200;
-        color: $textColor;
+        font-weight: 400;
+        color: $textBgColor;
         width: 60%;
 
         li{
@@ -46,7 +46,7 @@
                 text-decoration: none;
             }
             a:hover{
-                font-weight: 500;
+                font-weight: 600;
             }
         }
     }

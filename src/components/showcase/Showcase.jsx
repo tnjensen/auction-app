@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function Showcase() {
     const [listings,setListings] = useState([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
   
   useEffect(() => {
     axios.get('https://api.noroff.dev/api/v1/auction/listings')
